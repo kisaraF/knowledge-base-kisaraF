@@ -1,0 +1,8 @@
+00:00 - 03:26 - Interact with Files & File Permission Levels
+03:27 - 07:12 - The best practice to work with files (Context Managers)
+07:13 - 08:22 - File objects Properties
+08:23 - 12:26 - Read a file line by line
+12:27 - 15:35 - Read a file by some amount of characters
+15:35 - 19:10 - Read Multiple files at once
+19:11 - 20:47 - Writing to a new file
+20:47 - 25:52 - Adding text to an existing file
