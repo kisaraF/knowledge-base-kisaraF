@@ -98,7 +98,56 @@ def push_or_pop(a:list) -> list:
     
     return just
 
-print(push_or_pop([10]))
-print(push_or_pop([10, 4]))
-print(push_or_pop([10, 20, 30]))
-print(push_or_pop([10, 20, 2, 30]))
+# print(push_or_pop([10]))
+# print(push_or_pop([10, 4]))
+# print(push_or_pop([10, 20, 30]))
+# print(push_or_pop([10, 20, 2, 30]))
+
+
+#----------------------------- List Methods -----------------------------
+
+# ----- Count
+car_lot = ["Toyota", "Audi", "Audi", "Benz", "BMW", "BYD", "BYD", "BYD"]
+
+# print(car_lot.count("BYD"))
+
+
+
+# ----- Zip
+breakfast = ["Eggs", "Cereal", "Banana"]
+lunch = ["Sushi", "Chicken Teriyaki", "Soup"]
+dinner = ["Steak", "Meatballs", "Pasta"]
+
+# Each generator item needs to be unpacked with a seperate variable
+for a, b, c in zip(breakfast, lunch, dinner):
+    print(f"Breakfast : {a}  |  Lunch : {b}  |  Dinner : {c}")
+    
+# -------  Understanding nested list looping in list comprehension
+meals = [["Eggs", "Cereal", "Banana"]
+,["Sushi", "Chicken Teriyaki", "Soup"]
+,["Steak", "Meatballs", "Pasta"]]
+
+print([i for subls in meals for i in subls]) 
+
+# Can be understood using this
+for subls in meals:
+    for i in subls:
+        print(i)
+
+#------ Another coding exercises for looping nested lists in comprehensions (good to understand conditions with if)
+
+# Define a fancy_concatenate function that accepts a list of lists of strings
+# The function should return a concatenated string
+# The strings in a list should only be concatenated if the length of the list is 3
+#
+# EXAMPLES
+# fancy_concatenate([["A", "B", "C"]])                        => "ABC"
+# fancy_concatenate([["A", "B", "C"], ["D", "E", "F"]])       => "ABCDEF"
+# fancy_concatenate([["A", "B", "C"], ["D", "E", "F", "G"]])  => "ABC"
+# fancy_concatenate([["A", "B", "C"], ["D", "E"]])            => "ABC"
+# fancy_concatenate([["A", "B"], ["C", "D"]])                 => ""
+
+def fancy_concatenate(a:list) -> str:
+    return "".join([i for subi in a if len(subi) == 3 for i in subi])
+
+
