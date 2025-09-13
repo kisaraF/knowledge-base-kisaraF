@@ -34,3 +34,8 @@ sources:
 - In the following Screenshot, you can see that it gives an error.
 
 <img width="574" alt="source-freshness-ss" src="https://github.com/user-attachments/assets/ba34f4e1-0abf-4717-a577-dc77b0267655">
+
+
+- If all the conditions are met, it will be shown as the following:
+
+<img width="574" alt="source-freshness-ss" src="https://github.com/user-attachments/assets/3a3eb734-1335-496b-9b8c-aa857f637d9a">
