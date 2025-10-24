@@ -15,7 +15,7 @@ print(my_str.swapcase()) # make the lowercase captial and uppercase simple
 
 ```
 whitespace_str = '     hello   '
-print(whitespace_str.lstrip()) # Remove whitespace from the left side. Same fro rstrip
+print(whitespace_str.lstrip()) # Remove whitespace from the left side. Same for rstrip
 print(whitespace_str.strip()) # Removes all the whitespace
 
 website = 'www.helloi.org'

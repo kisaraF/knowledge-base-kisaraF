@@ -7,6 +7,11 @@ fligth_prices = {
 # print(fligth_prices["Chicago"]) # Accessing a value using key
 
 # -- Get method
+
+# If the key exists → returns its value.
+# If the key doesn’t exist → returns the default value given.
+# Does not insert the key into the dictionary. (Not modifying the dictionary)
+
 # dict_var.get(<key>, <default_value_if_key_is_absent>)
 # print(fligth_prices.get("SF", "Not exists")) 
 # print(fligth_prices.get("Colombo", "Not exists"))
@@ -33,6 +38,11 @@ cricketers["IND"] = ["Dhoni", "SKY", "Raina", "Jaiswal"]
 
 
 # -- Setdefault method
+
+# If the key exists → returns its value.
+# If the key doesn’t exist → adds key: default to the dictionary and returns the default value.
+# Modifies the dictionary if the key is missing.(Modifies the dict)
+
 film_directors = {
     "Godfather" : "Francis Ford Coppola",
     "Transformers" : "Micheal Bay",
