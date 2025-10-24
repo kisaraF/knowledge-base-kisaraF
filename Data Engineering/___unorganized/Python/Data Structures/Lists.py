@@ -151,3 +151,48 @@ def fancy_concatenate(a:list) -> str:
     return "".join([i for subi in a if len(subi) == 3 for i in subi])
 
 
+# ----------------------- Deep Copy vs Shallow Copy -------------------------------------
+
+import copy
+
+ls = [1, [2, 3], 4]
+
+# --- Shallow Copy
+ls_sp = copy.copy(ls)
+
+ls_sp[-1] = 28 # Changing the 1 Dimensional data of the copy list won't affect it's corresponding original list
+print(ls)
+print(ls_sp)
+
+print("\n")
+
+ls_sp[1][0] = 34 # Changing the 2 Dimensional data of the copy list will affect it's corresponding original list
+print(ls)
+print(ls_sp)
+
+print("\n")
+
+# --- Deep Copy
+ls = [1, [2, 3], 4]
+
+ls_sp = copy.deepcopy(ls)
+
+ls_sp[1][0] = 34 # Deep copies create independent list item copies unlike the shallow copying
+print(ls)
+print(ls_sp)
+
+
+# -----------------------------  Max Split Parameter in SPLIT()  ---------------------------
+text = "apple,banana,orange,grape"
+
+# No maxsplit (or maxsplit=-1) - splits at all commas
+result_all = text.split(',')
+print(f"Split all: {result_all}")
+
+# maxsplit=1 - splits only at the first comma
+result_one_split = text.split(',', 1)
+print(f"Split once: {result_one_split}")
+
+# maxsplit=2 - splits at the first two commas
+result_two_splits = text.split(',', 2)
+print(f"Split twice: {result_two_splits}")

@@ -1,15 +1,40 @@
+# ---- Accesing a dictionary value
+
 fligth_prices = {
     "Chicago": 199,
     "SF" : 499,
     "Denver" : 296
 }
 
-# print(fligth_prices["Chicago"]) # Accessing a value using key
+# print(fligth_prices["Chicago"]) # Using the key
 
 # -- Get method
+
+# If the key exists → returns its value.
+# If the key doesn’t exist → returns the default value given.
+# Does not insert the key into the dictionary. (Not modifying the dictionary)
+
 # dict_var.get(<key>, <default_value_if_key_is_absent>)
-# print(fligth_prices.get("SF", "Not exists")) 
-# print(fligth_prices.get("Colombo", "Not exists"))
+print(fligth_prices.get("SF", "Not exists")) 
+print(fligth_prices.get("Colombo", "Not exists"))
+
+# -- Setdefault method
+
+# If the key exists → returns its value.
+# If the key doesn’t exist → adds key: default to the dictionary and returns the default value.
+# Modifies the dictionary if the key is missing.(Modifies the dict)
+
+film_directors = {
+    "Godfather" : "Francis Ford Coppola",
+    "Transformers" : "Micheal Bay",
+    "Batman" : "Christoper Noalan"
+}
+
+# print(film_directors.get("Tenet", "Does Not exists"))
+film_directors.setdefault("Tenet", "Christoper Nolan")
+# print(film_directors.get("Tenet", "Does Not exists"))
+
+
 
 
 # -- Adding & Modifying Keys-Values
@@ -31,17 +56,6 @@ cricketers["IND"] = ["Dhoni", "SKY", "Raina", "Jaiswal"]
 # print(cricketers)
 
 
-
-# -- Setdefault method
-film_directors = {
-    "Godfather" : "Francis Ford Coppola",
-    "Transformers" : "Micheal Bay",
-    "Batman" : "Christoper Noalan"
-}
-
-# print(film_directors.get("Tenet", "Does Not exists"))
-film_directors.setdefault("Tenet", "Christoper Nolan")
-# print(film_directors.get("Tenet", "Does Not exists"))
 
 
 # ----------- Coding Exercises ---------------------------------------------------------------------------------------------------
@@ -133,6 +147,19 @@ def delete_keys(a:dict, b:list) -> dict:
 # -------------------------------------------------------------------------------------------------------------------------------
 
 
+# ----- Clear a Dictionary
+
+my_dict = {
+  "A": 1,
+  "B": 2,
+  "C": 3
+}
+
+print(my_dict)
+my_dict.clear()  # Clean the dictionary as a whole
+print(my_dict)
+
+
 # --- Update method (merging 2 dictionaries)
 emp_salaries = {
     "Brandon" : 900000,
@@ -151,10 +178,11 @@ emp_salaries_3 = {
 }
 
 # print(emp_salaries)
-emp_salaries.update(emp_salaries_2)
-# emp_salaries.update(emp_salaries_2).update(emp_salaries_3) # Can't do this
+emp_salaries.update(emp_salaries_2) # Merging emp_salaries_2 to emp_salaries. print emp_salaries and see
+# emp_salaries.update(emp_salaries_2).update(emp_salaries_3) # Can't do this; No Chaining
 # print(emp_salaries)
 
+# If in case the second dictionary getting merges has the same key, it will overwrite that key with the new value
 
 # -------------------------------------------------------------------------------------------------------------------------------
 # ---------------------------------------------------Dictionary Looping---------------------------------------
