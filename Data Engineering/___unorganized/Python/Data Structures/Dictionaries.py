@@ -56,6 +56,21 @@ cricketers["IND"] = ["Dhoni", "SKY", "Raina", "Jaiswal"]
 # print(cricketers)
 
 
+# -- Setdefault method
+
+# If the key exists → returns its value.
+# If the key doesn’t exist → adds key: default to the dictionary and returns the default value.
+# Modifies the dictionary if the key is missing.(Modifies the dict)
+
+film_directors = {
+    "Godfather" : "Francis Ford Coppola",
+    "Transformers" : "Micheal Bay",
+    "Batman" : "Christoper Noalan"
+}
+
+# print(film_directors.get("Tenet", "Does Not exists"))
+film_directors.setdefault("Tenet", "Christoper Nolan")
+# print(film_directors.get("Tenet", "Does Not exists"))
 
 
 # ----------- Coding Exercises ---------------------------------------------------------------------------------------------------
