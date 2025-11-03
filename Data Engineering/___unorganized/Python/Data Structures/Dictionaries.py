@@ -209,7 +209,7 @@ chinese_food = {
 }
 
 for food in chinese_food: #This is a basic way but shouldn't be practiced as it's called an anti-pattern. There are much better ways to do it
-    # print(f"The food is {food} and price is {chinese_food[food]}")
+    print(f"The food is {food} and price is {chinese_food[food]}")
     pass
 
 # -- Using items() method
@@ -220,8 +220,11 @@ pounds_to_kg = {
 }
 
 for k,v in pounds_to_kg.items():
-    # print(f"{k} kg -> {v} lbs")
+    print(f"{k} kg -> {v} lbs")
     pass
+
+# What actually happens as `k, v in dict.items()` is that when you do `items()` method it gives dictionary elements as tuples
+# Then k, v or any desired variable will unpack them
 
 
 # ----------- Coding Exercises ---------------------------------------------------------------------------------------------------
@@ -304,13 +307,40 @@ def common_elements(a:dict) -> list:
 
 
 # -------------------------------------------------------------------------------------------------------------------------------
+# -----------  Sorted Method  -----------
+
+salaries={
+    "Executive Assistant" : 20,
+    "CEO" : 100,
+    "Janitor" : 4,
+    "CFO" : 96
+}
+
+print(salaries)
+print(sorted(salaries)) # Returns a sorted keys list
+print(sorted(salaries.items())) # Returns a sorted dictionary
 
 
-# -- Using **kwargs
+# -------------------------------------------------------------------------------------------------------------------------------
+
+
+# -- Using **kwargs (*args sends a tuple whereas **kwargs sends a dict)
 
 def length_of_x(**kwargs):
-    xx = kwargs
-    return dict(zip([i for i in xx.keys()] , [len(i) for i in xx.values()]))
-    # return type(kwargs)
+    xx = kwargs #kwargs=xx here is the dictionary
+    return dict(zip([i for i in xx.keys()] , [len(i) for i in xx.values()])) #This just gets the length of value of each key
 
-print(length_of_x(hello = "Hello", hello_1 = "Hello_1", hello_2 = "Hello_22"))
+print(length_of_x(hello = "Hello", hello_1 = "Hello_1", hello_2 = "Hello_22")) #passing as a dictionary
+
+# Run the following for a better understanding:
+def args_kwargs(a, *args, **kwargs):
+    reg = a
+    print(f'{a} is {type(a)}')
+
+    xx = args
+    print(f'{xx} is {type(xx)}')
+
+    xxx = kwargs
+    print(f'{xxx} is {type(xxx)}')
+
+args_kwargs("Hello", "Honey", "Bunney", "You are my", "Pumpkin Pumpkin!", who= "You", what="Mine", really=True)
