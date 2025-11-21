@@ -20,3 +20,7 @@ This can be explained more with a book analogy
 - Book : Repo working on
 - Bookmarks : Different branches and there can be multiple branches
 - HEAD : The bookmark currently opened (not every bookmark can be opened up at the same time)
+
+## (Optional) On Git Storing Head of each branch
+
+If you do a ```git log```, you can find the git commit history for each branch in that particular branch. Similarly if you go to the `.git` folder, "refs -> heads" folder you can see a text file for each branch with the latest commit hash of that branch. Compare it with git log commit hashes for a clear picture.
