@@ -1,3 +1,4 @@
 # Ignore obsidian configs
 .obsidian/
 Data\ Engineering/___unorganized/Python/Data Structures/temp.py
+Data\ Engineering/___unorganized/Python/Data Structures/__pycache__/
