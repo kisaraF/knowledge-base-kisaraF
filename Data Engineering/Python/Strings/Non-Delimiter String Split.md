@@ -2,7 +2,7 @@
 
 ## Split a non-delimitered string in Python using list (string) 
 
-```
+```python
 def three_number_sum(a:str) -> int:
     new_ls = list(a)
     sum_ls = int(new_ls[0]) + int(new_ls[1]) + int(new_ls[-1])

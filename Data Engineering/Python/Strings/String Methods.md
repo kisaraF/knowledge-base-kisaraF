@@ -3,7 +3,7 @@
 
 ## Capitalize(), Title(), Swapcase()
 
-```
+```python
 my_str = 'once upon a time there was a man'
 
 print(my_str.capitalize()) # only make the first letter capital (Once upon a time there was a man) 
@@ -13,7 +13,7 @@ print(my_str.swapcase()) # make the lowercase captial and uppercase simple
 
 ## Cleaning Strings
 
-```
+```python
 whitespace_str = '     hello   '
 print(whitespace_str.lstrip()) # Remove whitespace from the left side. Same for rstrip
 print(whitespace_str.strip()) # Removes all the whitespace
@@ -27,7 +27,7 @@ print(website.strip("worg."))
 
 ## Replacing strings
 
-```
+```python
 phone_no = '075 277 3615'
 print(phone_no.replace(" ", "-"))
 ```
@@ -35,7 +35,7 @@ print(phone_no.replace(" ", "-"))
 
 ## Using .format() function
 
-```
+```python
 mad_libs = "{txt_1} laughed at the {txt_2} {txt_3}."
 mad_libs_2 = "{} laughed at the {} {} {}."
 

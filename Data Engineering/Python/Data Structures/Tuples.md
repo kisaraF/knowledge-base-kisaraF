@@ -1,3 +1,12 @@
+# Tuples
+
+Tuples are immutable data structure type that looks similar to a list. It's great for use when you need to keep values of certain things immutable unlike in a list.
+
+## Tuple Methods
+
+### Adding new elements to the tuple
+
+```python
 address = (
     ['Street 1', "Area 1", "Coe 1"],
     ['Street 2', "Area 2", "Coe 2"],
@@ -8,9 +17,11 @@ print(address)
 
 address[0].append("New_element")
 print(address)
+```
 
+### Unpacking Tuples
 
-# ------ Unpacking a tuple
+```python
 employee = ("Kisara", "Fernando", "Associate Data Engineer", 24)
 
 fname, lname, title, age = employee
@@ -27,13 +38,16 @@ print(fname, lname, title)
 
 fname, *lname , title = employee # Positioning is key
 print(fname, lname, title)
+```
 
+### `*args`
 
-# ------  Use of *args  ------
+Use to collect any number of arguments to a function and to return it as a tuple object.
 
-# Use to collect any number of arguments to a function and to return it as a tuple object
+```python
 def accept_stuff(*args): # args is just a general name. Can use anything you want
     print(type(args))
     print(args)
 
 accept_stuff(1,2,3,4,5,6,7,8,9)
+```

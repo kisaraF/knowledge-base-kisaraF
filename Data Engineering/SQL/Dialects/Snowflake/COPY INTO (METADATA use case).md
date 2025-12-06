@@ -4,13 +4,13 @@
 
 I'm using a copy into command to get data from a file in S3 location in snowflake. My staging table has a column as file_name. In the data file in S3 there's no such column. I need to add the name of the file to the column when using copy into to ingest data. I heard that 
 
-```
+```sql
 COPY INTO table1 FROM @stage1
 MATCH_BY_COLUMN_NAME = CASE_INSENSITIVE
 INCLUDE_METADATA = (
     ingestdate = METADATA$START_SCAN_TIME, filename = METADATA$FILENAME);
 
-can be used to do this. The following is how my copy into command is in right now:
+-- can be used to do this. The following is how my copy into command is in right now:
 
 copy into <staging_table> ( 
         col_1,
@@ -43,7 +43,7 @@ To include the filename as part of your `COPY INTO` command in Snowflake, you ca
 
 Here’s how you can rewrite your `COPY INTO` command to include the filename:
 
-```
+```sql
 COPY INTO <staging_table> ( 
         col_1,
         col_2,

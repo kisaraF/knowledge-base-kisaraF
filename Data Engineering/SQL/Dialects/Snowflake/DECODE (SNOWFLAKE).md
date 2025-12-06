@@ -3,7 +3,7 @@
 ## Prompt: 
 
 How to use DECODE function in a select statement given as:
-```
+```sql
 SELECT 
     DECODE(STATUS,''ACTIVE'' ,''Y'',''INACTIVE'' ,''N'') as OUT_STATUS
 ```

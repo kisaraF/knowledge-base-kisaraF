@@ -4,7 +4,7 @@ Pivot is a much needed transformation to keep in practice as it's often needed f
 
 A sample query is as follows,
 
-```
+```sql
 SELECT *
 FROM (
     SELECT country, year, sales
@@ -32,7 +32,7 @@ _Another small example_
 | UK      | 2020 | 200   |
 | UK      | 2021 | 340   |
 
-```
+```sql
 SELECT *
 FROM sales_data
 PIVOT (

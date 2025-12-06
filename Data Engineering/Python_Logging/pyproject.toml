@@ -1,9 +1,0 @@
-[project]
-name = "python-logging"
-version = "0.1.0"
-description = "Add your description here"
-readme = "README.md"
-requires-python = ">=3.8"
-dependencies = [
-    "logging>=0.4.9.6",
-]

@@ -13,7 +13,7 @@ To perform a randomized sampling of 10,000 records from a table in Snowflake, yo
 
 You can use the following SQL query to achieve this:
 
-```
+```sql
 SELECT *
 FROM your_table_name
 ORDER BY RANDOM()
@@ -33,7 +33,7 @@ Using `TABLESAMPLE` (if applicable)
 
 If your table is large and you want a more efficient way to sample, you can use the `TABLESAMPLE` clause, but note that it does not guarantee an exact number of rows:
 
-```
+```sql
 SELECT *
 FROM your_table_name
 TABLESAMPLE (0.1) -- Adjust the percentage as needed

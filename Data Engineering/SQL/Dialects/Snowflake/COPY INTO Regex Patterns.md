@@ -6,7 +6,7 @@ I have an external stage which has a folder as "New Folder" without any underscr
 
 ## Answer:
 
-```
+```sql
 COPY INTO PROD_DLK_DB.EXT_TABS.TEST_AIRTEL_HIS_X
 FROM @COMMON_OBJECTS.MANUAL_RECOVERIES_AWS/Airtel/Airtel_History_Loading/
 FILE_FORMAT = (TYPE = 'CSV' FIELD_OPTIONALLY_ENCLOSED_BY = '"' SKIP_HEADER = 1)
